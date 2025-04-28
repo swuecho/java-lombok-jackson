@@ -4,7 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
+@NoArgsConstructor // <-- Add this annotation
+// @AllArgsConstructor // Optional: Add this if you want a constructor for ALL fields too
 public class Status {
     private boolean isActive; // Java field name
     private String message;
