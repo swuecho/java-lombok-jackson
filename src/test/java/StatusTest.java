@@ -18,7 +18,7 @@ public class StatusTest {
     @Test
     public void TestIsGetterReader() throws  Exception {
         ObjectMapper mapper = new ObjectMapper();
-        String jsonInput =  "{\"message\":\"System online\",\"active\":true,\"messageExists\":true}";
+        String jsonInput =  "{\"message\":\"System online\",\"active\":true}";
 
         // 2. Act: Deserialize the JSON string into a Status object
         Status deserializedStatus = mapper.readValue(jsonInput, Status.class);
@@ -33,9 +33,9 @@ public class StatusTest {
     }
 
     @Test
-    public void TestIsGetterReaderTrow() throws  Exception {
+    public void TestIsGetterReaderThrow() throws  Exception {
         ObjectMapper mapper = new ObjectMapper();
-        String jsonInput =  "{\"message\":\"System online\",\"active\":true,\"messageExists\":true}";
+        String jsonInput =  "{\"message\":\"System online\",\"active\":true}";
 
         // 2. Act: Deserialize the JSON string into a Status object
         Status deserializedStatus = mapper.readValue(jsonInput, Status.class);
